@@ -19,8 +19,9 @@ const Cart = () => {
     <>
       <NavBar />
       <Container fluid>
+      <h1 className="text-center">Products</h1>
         <Row xs={1} md={2} lg={3} xl={4} className="g-4">
-          <h1 className="text-center">Product Dashboard</h1>
+          
           {products.map((items) => (
             <Col
               className="col-md-3 "
