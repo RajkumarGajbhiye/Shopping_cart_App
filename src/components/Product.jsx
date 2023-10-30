@@ -56,7 +56,7 @@ const Product = () => {
         size="lg"
           type="text"
           placeholder="Enter products....."
-          
+          style={{ marginBottom: "20px" }}
         />
        
          </Col>
