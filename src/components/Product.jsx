@@ -48,15 +48,20 @@ const Product = () => {
   return (
     <Container>
       <h1 className="text-center">Product Dashboard</h1>
-      <Row xs={1} md={2} lg={3} xl={4}>
-        <Form.Control
+      <Row >
+        <Row>
+      <Col >
+        <Form.Control 
           onChange={(e) => setSearchTerm(e.target.value)}
-          size="large"
+        size="lg"
           type="text"
-          placeholder="Large text"
-          style={{ marginTop: "2em" }}
+          placeholder="Enter products....."
+          
         />
-        <br />
+       
+         </Col>
+         </Row>
+        
 
         {products
           .filter((item) =>
@@ -64,18 +69,18 @@ const Product = () => {
           )
           .map((item) => (
             <Col
-              className="col-md-3 "
+             className="colStyle"
               key={item.id}
               style={{ marginBottom: "20px" }}
             >
-              <Card className="h-100 text-center" style={{ width: "18rem" }}>
-                <div className="d-flex justify-content-center align-items-center">
+              <Card className="text-center" style={{ width: "18rem"}}>
+               
                   <Card.Img
                     variant="top"
                     src={item.image}
-                    style={{ width: "10rem", height: "7rem" }}
+                    style={{ maxWidth: "400px", height: "7rem"}}
                   />
-                </div>
+              
                 <Card.Body>
                   <Card.Title>{item.title}</Card.Title>
                   <Card.Text>INR: {item.price}</Card.Text>
@@ -88,6 +93,7 @@ const Product = () => {
               </Card>
             </Col>
           ))}
+         
       </Row>
     </Container>
   );

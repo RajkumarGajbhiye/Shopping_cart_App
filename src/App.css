@@ -2,3 +2,20 @@
   margin:0;
   padding:0;
 }
+
+
+@media (max-width: 750px)and (max-width: 386px) {
+ .colStyle {
+    display: flex;
+    justify-content: center;
+  }
+  
+}
+
+@media (min-width: 414px) {
+  .colStyle {
+    display: flex;
+    justify-content: center;  
+  }
+}
+

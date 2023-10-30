@@ -18,37 +18,28 @@ const Cart = () => {
   return (
     <>
       <NavBar />
-      <Container fluid>
+      <Container>
       <h1 className="text-center">Products</h1>
-        <Row xs={1} md={2} lg={3} xl={4} className="g-4">
+        <Row>
           
           {products.map((items) => (
-            <Col
-              className="col-md-3 "
+            <Col   className="colStyle"
               key={items.id}
-              style={{ margin: "3rem" }}
+              style={{ marginBottom: "20px" }}
             >
-              <Card
-                className="h-100 text-center "
-                style={{
-                  width: "25rem",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <div className="d-flex justify-content-center align-items-center">
+               <Card className="text-center" style={{ width: "18rem"}}>
+               
                   <Card.Img
                     variant="top"
                     src={items.image}
-                    style={{ width: "10rem", height: "7rem" }}
+                    style={{ maxWidth: "400px", height: "7rem"}}
                   />
-                </div>
+            
                 <Card.Body>
                   <Card.Title>{items.title}</Card.Title>
                   <Card.Text>INR: {items.price}</Card.Text>
                 </Card.Body>
-                <Card.Footer style={{ width: "25rem" }}>
+                <Card.Footer>
                   <Button
                     variant="danger"
                     onClick={() => removeToCart(items.id)}
