@@ -32,7 +32,7 @@ const Cart = () => {
                   <Card.Img
                     variant="top"
                     src={items.image}
-                    style={{ maxWidth: "400px", height: "7rem"}}
+                    style={{ height: "15rem",width:"15em"}}
                   />
             
                 <Card.Body>
@@ -57,3 +57,5 @@ const Cart = () => {
 };
 
 export default Cart;
+
+

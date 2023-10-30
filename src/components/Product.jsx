@@ -76,9 +76,9 @@ const Product = () => {
               <Card className="text-center" style={{ width: "18rem"}}>
                
                   <Card.Img
-                    variant="top"
+                   
                     src={item.image}
-                    style={{ maxWidth: "400px", height: "7rem"}}
+                    style={{ height: "15rem",width:"15em"}}
                   />
               
                 <Card.Body>
